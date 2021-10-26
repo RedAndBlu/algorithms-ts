@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "reference to some data structure and algorithm",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/**/* && eslint test/**/*"
   },
   "repository": {
     "type": "git",
