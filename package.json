@@ -1,0 +1,27 @@
+{
+  "name": "algorithms-ts",
+  "version": "0.1.0",
+  "description": "reference to some data structure and algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedAndBlu/algorithms-ts.git"
+  },
+  "keywords": [
+    "data",
+    "structure",
+    "algorithm"
+  ],
+  "author": "Davide D.",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/RedAndBlu/algorithms-ts/issues"
+  },
+  "homepage": "https://github.com/RedAndBlu/algorithms-ts#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}

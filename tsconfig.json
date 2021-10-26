@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES6",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
