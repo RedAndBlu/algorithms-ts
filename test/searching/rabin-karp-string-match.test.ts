@@ -2,6 +2,7 @@ import {
   RabinKarpStringMatch
 } from '../../src/searching/rabin-karp-string-match';
 import { randomWord } from '../../src/util/random-word';
+import { shuffle } from '../../src/sorting/shuffle';
 
 describe('RabinKarpStringMatch', () => {
   describe('.search(text)', () => {
@@ -23,9 +24,13 @@ describe('RabinKarpStringMatch', () => {
     );
 
     test('should be able to handle large text input', () => {
-      const matcher = new RabinKarpStringMatch('tx');
-      const text = Array.from({ length: 10_000 }, () => randomWord()).join(' ');
-      expect(matcher.search(text)).toBe(text.search(/tx/));
+      const pattern = 'takeshi';
+      const words = Array.from({ length: 10_000 }, () => randomWord());
+      words.push(pattern);
+      shuffle(words);
+      const text = words.join(' ');
+      const matcher = new RabinKarpStringMatch(pattern);
+      expect(matcher.search(text)).toBe(text.search(new RegExp(pattern)));
     });
   });
 });
